@@ -6,14 +6,14 @@
        name: httpd
        state: absent
 
-- name: Remove Apache from ubuntuservers
+- name: Remove Nginx from ubuntuservers
   hosts: ubuntuservers
   tasks:
-   - name: Remove Apache
+   - name: Remove Nginx
      apt:
-       name: apache2
+       name: nginx
        state: absent
-   - name: Remove unwanted Apache2 packages from the system
+   - name: Remove unwanted Nginx packages from the system
      apt:
        autoremove: yes
        purge: yes
