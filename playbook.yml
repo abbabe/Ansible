@@ -27,3 +27,8 @@
       loop:
         - httpd
         - wget
+    - name: start Apache
+      service:
+       name: httpd
+       state: restarted
+       enabled: yes
