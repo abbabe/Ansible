@@ -1,5 +1,5 @@
 - name : play 1
-  hosts: ubuntu
+  hosts: ubuntuserver
   tasks:
     - name: inst nginx
       apt: 
@@ -19,7 +19,7 @@
 
 
 - name: play 2
-  hosts: webserver
+  hosts: webservers
   tasks:
     - name: installing httpd and wget
       yum:
