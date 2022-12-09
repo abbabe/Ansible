@@ -7,7 +7,7 @@
        state: absent
 
 - name: Remove Nginx from ubuntuservers
-  hosts: ubuntuservers
+  hosts: ubuntuserver
   tasks:
    - name: Remove Nginx
      apt:
