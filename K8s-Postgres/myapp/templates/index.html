@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Python Flask CRUD using PostgreSQL on AWS RDS - Contact Form</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css')}}" />
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+    function SubForm() {
+      $.ajax({
+        url: 'https://api.apispreadsheets.com/data/jMGwn06FaKODhaKy/',
+        type: 'post',
+        data: $("#myForm").serializeArray(),
+        success: function () {
+          alert("Form Data Submitted :)")
+        },
+        error: function (e) {
+          alert("There was an error :(")
+        }
+      });
+    }
+  </script>
+</head>
+
+<body>
+
+  <h1>  Python Flask  Create, read, update and delete (CRUD) using PostgreSQL SQLAlchemy </h1>
+  <div class="inputBox">
+    <form id="myForm" action="/submit" method="POST" >
+
+      <input type="text" required="required" id="name" name="name" />
+      <span>Name</span>
+      <br />
+      <input type="text" required="required" id="surname" name="surname" />
+      <span>Surname</span>
+      <br />
+      <input type="text" required="required" id="age" name="age" />
+      <span>Age</span>
+      <br />
+      <input type="text" required="required" id="email" name="email" />
+      <span>Email</span>
+      <br />
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+
+  </div>
+
+ 
+
+
+
+</body>
+
+
+
+
+
+</html>
